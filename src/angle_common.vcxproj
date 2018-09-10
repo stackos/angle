@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -24,23 +24,23 @@
     <RootNamespace>angle_common</RootNamespace>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <CharacterSet>MultiByte</CharacterSet>
     <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
   <PropertyGroup Label="Locals">
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
-  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
-  <ImportGroup Label="ExtensionSettings"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\third_party\cygwin\bin\;$(MSBuildProjectDirectory)\..\third_party\python_26\</ExecutablePath>
     <OutDir>$(SolutionDir)$(Configuration)_$(Platform)\</OutDir>
@@ -219,49 +219,49 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="common\Color.inl"/>
-    <None Include="angle.gyp"/>
+    <None Include="common\Color.inl" />
+    <None Include="angle.gyp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="common\Color.h"/>
-    <ClInclude Include="common\MemoryBuffer.h"/>
-    <ClInclude Include="common\Optional.h"/>
-    <ClInclude Include="common\angleutils.h"/>
-    <ClInclude Include="common\bitset_utils.h"/>
-    <ClInclude Include="common\debug.h"/>
-    <ClInclude Include="common\mathutil.h"/>
-    <ClInclude Include="common\matrix_utils.h"/>
-    <ClInclude Include="common\platform.h"/>
-    <ClInclude Include="common\string_utils.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\base_export.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\containers\mru_cache.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\logging.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\macros.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_conversions.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_conversions_impl.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_math.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_math_impl.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\sha1.h"/>
-    <ClInclude Include="common\third_party\base\anglebase\sys_byteorder.h"/>
-    <ClInclude Include="common\third_party\smhasher\src\PMurHash.h"/>
-    <ClInclude Include="common\tls.h"/>
-    <ClInclude Include="common\utilities.h"/>
-    <ClInclude Include="common\vector_utils.h"/>
-    <ClInclude Include="common\version.h"/>
+    <ClInclude Include="common\Color.h" />
+    <ClInclude Include="common\MemoryBuffer.h" />
+    <ClInclude Include="common\Optional.h" />
+    <ClInclude Include="common\angleutils.h" />
+    <ClInclude Include="common\bitset_utils.h" />
+    <ClInclude Include="common\debug.h" />
+    <ClInclude Include="common\mathutil.h" />
+    <ClInclude Include="common\matrix_utils.h" />
+    <ClInclude Include="common\platform.h" />
+    <ClInclude Include="common\string_utils.h" />
+    <ClInclude Include="common\third_party\base\anglebase\base_export.h" />
+    <ClInclude Include="common\third_party\base\anglebase\containers\mru_cache.h" />
+    <ClInclude Include="common\third_party\base\anglebase\logging.h" />
+    <ClInclude Include="common\third_party\base\anglebase\macros.h" />
+    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_conversions.h" />
+    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_conversions_impl.h" />
+    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_math.h" />
+    <ClInclude Include="common\third_party\base\anglebase\numerics\safe_math_impl.h" />
+    <ClInclude Include="common\third_party\base\anglebase\sha1.h" />
+    <ClInclude Include="common\third_party\base\anglebase\sys_byteorder.h" />
+    <ClInclude Include="common\third_party\smhasher\src\PMurHash.h" />
+    <ClInclude Include="common\tls.h" />
+    <ClInclude Include="common\utilities.h" />
+    <ClInclude Include="common\vector_utils.h" />
+    <ClInclude Include="common\version.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="common\Float16ToFloat32.cpp"/>
-    <ClCompile Include="common\MemoryBuffer.cpp"/>
-    <ClCompile Include="common\angleutils.cpp"/>
-    <ClCompile Include="common\debug.cpp"/>
-    <ClCompile Include="common\mathutil.cpp"/>
-    <ClCompile Include="common\string_utils.cpp"/>
-    <ClCompile Include="common\third_party\base\anglebase\sha1.cc"/>
-    <ClCompile Include="common\third_party\smhasher\src\PMurHash.cpp"/>
-    <ClCompile Include="common\tls.cpp"/>
-    <ClCompile Include="common\uniform_type_info_autogen.cpp"/>
-    <ClCompile Include="common\utilities.cpp"/>
-    <ClCompile Include="common\system_utils_win.cpp"/>
+    <ClCompile Include="common\Float16ToFloat32.cpp" />
+    <ClCompile Include="common\MemoryBuffer.cpp" />
+    <ClCompile Include="common\angleutils.cpp" />
+    <ClCompile Include="common\debug.cpp" />
+    <ClCompile Include="common\mathutil.cpp" />
+    <ClCompile Include="common\string_utils.cpp" />
+    <ClCompile Include="common\third_party\base\anglebase\sha1.cc" />
+    <ClCompile Include="common\third_party\smhasher\src\PMurHash.cpp" />
+    <ClCompile Include="common\tls.cpp" />
+    <ClCompile Include="common\uniform_type_info_autogen.cpp" />
+    <ClCompile Include="common\utilities.cpp" />
+    <ClCompile Include="common\system_utils_win.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="commit_id.vcxproj">
@@ -269,7 +269,7 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
-  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
-  <ImportGroup Label="ExtensionTargets"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
